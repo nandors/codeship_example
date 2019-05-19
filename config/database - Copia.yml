@@ -17,8 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  user: ryyszjnpfojigy
-  password: 2b8991bab72632d3920d7d6a5e33ba76ba0013840e01062b5f7189e6dde53861
+  user: postgres
+  password: seguro
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: d6ojtdrsrn1341
-  username: ryyszjnpfojigy
-  password: 2b8991bab72632d3920d7d6a5e33ba76ba0013840e01062b5f7189e6dde53861
+  database: codeship_production
+  username: codeship
+  password: <%= ENV['CODESHIP_DATABASE_PASSWORD'] %>

@@ -17,15 +17,15 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  user: postgres
-  password: seguro
+  user: ryyszjnpfojigy
+  password: 2b8991bab72632d3920d7d6a5e33ba76ba0013840e01062b5f7189e6dde53861
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: codeship_development
+  database: d6ojtdrsrn1341
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -82,6 +82,6 @@ test:
 #
 production:
   <<: *default
-  database: codeship_production
-  username: codeship
-  password: <%= ENV['CODESHIP_DATABASE_PASSWORD'] %>
+  database: d6ojtdrsrn1341
+  username: ryyszjnpfojigy
+  password: 2b8991bab72632d3920d7d6a5e33ba76ba0013840e01062b5f7189e6dde53861
